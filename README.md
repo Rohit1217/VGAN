@@ -13,16 +13,14 @@
 * LayerNorms are not used during training. This architecture seems really inefficient and we will tweak it to make it more efficient
 
 ## Inference
-* We take a zero vector of size (B,784)
-* We autoregressively generate one pixel at a time (i+1th pixel is generated at ith run)
-* Doing this proccess for 783 times generates the required image
+* We simply run the trained generators to produce images from random noise
 
 ## Psuedocode(Training)
 * Take an image(MNIST)
-* Flatten it to from B,28,28 to B,28*28
-* We feed this to the Neural Network
-* Apply the mask to weights and do forward pass
-* Train using backprop with Adam optimizer, hyperparameters can be found in the code.
+* We feed  this to discriminator and run forward pass
+* Backprop on the loss to maximize the probability of correctly identifying this images
+* Generate same number of images from Genrator using random noise
+* Send this images to discriminator, run backprop to minimize the probability of correctly identifying these images.
 
 ## Training Details
 * Trained for 18 epochs on colab RAM
