@@ -1,4 +1,4 @@
-# VGAN
+# Vanilla GAN
 * The following is an implementation based on the original GAN paper by Goodfellow
 * We have implemented both the CNN based and FFN based GANs
 * We have done many experiments to get the thing working, only the final details are included in this file
