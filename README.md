@@ -4,7 +4,7 @@
 * We have done many experiments to get the thing working, only the final details are included in this file
 
 ## Training Datset
-* Only MNIST Dataset was used to test due to compute constraint. We have not reported log probabilities, it is a future work on test dataset
+* Only MNIST Dataset was used to test due to compute constraint. 
 
 ## Architecture Details
 ### FC
